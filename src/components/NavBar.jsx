@@ -1,6 +1,6 @@
 function Navbar() {
   return (
-    <nav className="sticky top-0 z-50 w-full pt-6">
+    <nav className="fixed top-0 z-50 w-full pt-6">
       <div
         className="
           mx-auto
@@ -165,7 +165,8 @@ function Navbar() {
           "
         >
           {/* Log In */}
-          <button
+          <a
+            href="###"
             type="button"
             className="
               flex
@@ -196,10 +197,11 @@ function Navbar() {
             }}
           >
             Log In
-          </button>
+          </a>
 
           {/* Sign Up */}
-          <button
+          <a
+            href="###"
             type="button"
             className="
               flex
@@ -232,7 +234,7 @@ function Navbar() {
               aria-hidden="true"
               className="h-[10px] w-[14px] shrink-0"
             />
-          </button>
+          </a>
         </div>
       </div>
     </nav>
