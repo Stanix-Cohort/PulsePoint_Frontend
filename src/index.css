@@ -32,5 +32,5 @@ body {
 }
 
 .handwritten-wiggle {
-  animation: gentle-wiggle 1s ease-in-out infinite;
+  animation: gentle-wiggle 3s ease-in-out infinite;
 }
