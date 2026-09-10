@@ -1,6 +1,19 @@
 function ActionButtons() {
   return (
-    <div className="flex h-[52px] w-[490px] gap-[10px]">
+    <div
+      className="
+        flex
+        h-[52px]
+        w-[490px]
+        gap-[10px]
+
+        max-md:h-auto
+        max-md:w-full
+        max-md:flex-col
+        max-md:items-center
+        max-md:gap-[12px]
+      "
+    >
       {/* Become a Donor */}
       <a
         href="###"
@@ -26,6 +39,9 @@ function ActionButtons() {
           font-semibold
           leading-[160%]
           text-white
+
+          max-md:w-full
+          max-md:max-w-[360px]
         "
       >
         <span className="whitespace-nowrap">
@@ -63,6 +79,9 @@ function ActionButtons() {
           font-semibold
           leading-[160%]
           text-white
+
+          max-md:w-full
+          max-md:max-w-[360px]
         "
       >
         <span className="whitespace-nowrap">

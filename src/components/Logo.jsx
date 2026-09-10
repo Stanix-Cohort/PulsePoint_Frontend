@@ -1,7 +1,6 @@
 function Logo({ footer = false }) {
   return (
-    <div className="flex h-[30px] w-[136.96px] shrink-0 items-center gap-2">
-      {/* Logo Icon */}
+    <div className="flex h-[30px] w-[136.96px] shrink-0 items-center gap-2 max-[1023px]:scale-[0.75] max-[1023px]:origin-left">      {/* Logo Icon */}
       <div className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-red-700">
         <svg
           width="20"

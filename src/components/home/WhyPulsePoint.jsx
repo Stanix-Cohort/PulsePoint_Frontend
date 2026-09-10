@@ -1,6 +1,7 @@
 import { useState } from "react";
 import WhyPulsePointCard from "./WhyPulsePointCard";
 import AudienceToggle from "./AudienceToggle";
+
 const donorFeatures = [
   {
     title: "Find Requests Near You",
@@ -50,33 +51,98 @@ function WhyPulsePoint() {
     audience === "donors" ? donorFeatures : hospitalFeatures;
 
   return (
-    <section id="why-pulsepoint" className="bg-white px-1 py-[100px]">
-      <div className="mx-auto flex w-full flex-col items-center">
-        <h2 className="whitespace-nowrap font-['Montserrat'] text-[38px] font-semibold leading-[100%] tracking-[0] text-[#1D1D1D]">
+    <section
+      id="why-pulsepoint"
+      className="
+        bg-white
+        px-4
+        py-[70px]
+
+        sm:px-6
+        sm:py-[80px]
+
+        md:px-8
+        md:py-[90px]
+
+        lg:px-4
+        lg:py-[100px]
+      "
+    >
+      <div
+        className="
+          mx-auto
+          flex
+          w-full
+          max-w-[1206px]
+          flex-col
+          items-center
+        "
+      >
+        {/* Section Title */}
+        <h2
+          className="
+            m-0
+            text-center
+            font-['Montserrat']
+            text-[30px]
+            font-semibold
+            leading-[100%]
+            tracking-[0]
+            text-[#1D1D1D]
+
+            sm:text-[34px]
+
+            lg:text-[38px]
+          "
+        >
           Why PulsePoint?
         </h2>
 
         {/* Audience Toggle */}
         <AudienceToggle
-        audience={audience}
-        setAudience={setAudience}
+          audience={audience}
+          setAudience={setAudience}
         />
 
         {/* Feature Cards */}
         <div
           className="
-            mt-12
-            h-[307px]
-            w-[1206px]
+            mt-10
+            w-full
             rounded-[19px]
-            border-r-[8px]
-            border-b-[8px]
+            border-r-[6px]
+            border-b-[6px]
             border-[#2F0707]
             bg-[#BC1010]
-            p-[10px]
+            p-[8px]
+
+            sm:mt-11
+            sm:border-r-[7px]
+            sm:border-b-[7px]
+            sm:p-[9px]
+
+            lg:mt-12
+            lg:h-[307px]
+            lg:w-[1206px]
+            lg:border-r-[8px]
+            lg:border-b-[8px]
+            lg:p-[10px]
           "
         >
-          <div className="grid h-[268px] grid-cols-3 gap-[8px]">
+          <div
+            className="
+              grid
+              w-full
+              grid-cols-1
+              gap-[8px]
+
+              md:grid-cols-2
+
+              lg:h-[268px]
+              lg:grid-cols-3
+              lg:gap-[8px]
+            "
+          >
             {features.map((feature, index) => (
               <WhyPulsePointCard
                 key={feature.title}

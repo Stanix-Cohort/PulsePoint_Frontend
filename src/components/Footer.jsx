@@ -3,14 +3,175 @@ import ActionButtons from "./ActionButtons";
 
 function Footer() {
   return (
-        <footer
-        className="h-[472px] w-full px-[90px] py-[56px]"
-        style={{
-            background:
-            "linear-gradient(90deg, #250606 0%, #350707 45%, #5A0A0B 100%)",
-        }}
+    <footer
+      className="
+        w-full
+        bg-gradient-to-r from-[#250606] via-[#350707] to-[#5A0A0B]
+
+        px-5
+        py-10
+
+        sm:px-6
+        sm:py-12
+
+        md:px-8
+        md:py-14
+
+        lg:h-[472px]
+        lg:px-[90px]
+        lg:py-[56px]
+      "
+    >
+      {/* Mobile + Tablet Layout */}
+      <div
+        className="
+          mx-auto
+          flex
+          w-full
+          flex-col
+
+          lg:hidden
+        "
+      >
+        {/* Brand Header */}
+        <div className="flex w-full flex-col">
+          <Logo footer />
+
+          <p
+            className="
+              m-0
+              mt-6
+              max-w-[500px]
+              font-['Inter']
+              text-[15px]
+              font-normal
+              leading-[25px]
+              text-white
+
+              sm:text-[16px]
+              sm:leading-[27px]
+            "
+          >
+            Connecting hospitals with eligible blood donors to save lives
+            across Nigeria.
+          </p>
+        </div>
+
+        {/* CTA Buttons */}
+        <div className="mt-7 w-full">
+          <ActionButtons />
+        </div>
+
+        {/* Copyright */}
+        <div className="mt-10">
+          <p
+            className="
+              m-0
+              font-['Inter']
+              text-[13px]
+              font-normal
+              leading-[22px]
+              text-[#8F9FA3]
+            "
+          >
+            © 2026 — Copyright
+            <br />
+            All Rights reserved
+          </p>
+        </div>
+
+        {/* Navigation Links */}
+        <nav
+          className="
+            mt-10
+            flex
+            w-full
+            flex-col
+            gap-6
+
+            sm:mt-12
+            sm:gap-7
+          "
         >
-      <div className="flex h-[360px] w-full justify-between gap-[99px]">
+          <a
+            href="/"
+            className="font-['Inter'] text-[15px] font-normal leading-[140%] text-white"
+          >
+            Home
+          </a>
+
+          <a
+            href="#how-it-works"
+            className="font-['Inter'] text-[15px] font-normal leading-[140%] text-white"
+          >
+            How it works
+          </a>
+
+          <a
+            href="#eligibility"
+            className="font-['Inter'] text-[15px] font-normal leading-[140%] text-white"
+          >
+            Eligibility Guide
+          </a>
+
+          <a
+            href="#privacy"
+            className="font-['Inter'] text-[15px] font-normal leading-[140%] text-white"
+          >
+            Privacy Policy
+          </a>
+
+          <a
+            href="#healthcare-policy"
+            className="font-['Inter'] text-[15px] font-normal leading-[140%] text-white"
+          >
+            Healthcare Policy
+          </a>
+
+          <a
+            href="#terms"
+            className="font-['Inter'] text-[15px] font-normal leading-[140%] text-white"
+          >
+            Terms and Conditions
+          </a>
+        </nav>
+
+        {/* Contact Us */}
+        <div className="mt-10 flex flex-col gap-4 sm:mt-12">
+          <h3
+            className="
+              m-0
+              font-['Inter']
+              text-[20px]
+              font-bold
+              leading-[110%]
+              tracking-[-1%]
+              text-white
+            "
+          >
+            Contact Us
+          </h3>
+
+          <div
+            className="
+              flex
+              flex-col
+              gap-1
+              font-['Inter']
+              text-[14px]
+              font-normal
+              leading-[160%]
+              text-white
+            "
+          >
+            <p className="m-0">+1 (999) 888-77-66</p>
+            <p className="m-0">hello@logoipsum.com</p>
+          </div>
+        </div>
+      </div>
+
+      {/* Desktop Layout */}
+      <div className="hidden h-[360px] w-full justify-between gap-[99px] lg:flex">
         {/* Left Side */}
         <div className="flex h-[360px] w-[560px] flex-col justify-between">
           {/* Logo, Description & Buttons */}

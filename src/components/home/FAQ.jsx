@@ -37,8 +37,99 @@ function FAQ() {
   };
 
   return (
-    <section id="faq" className="bg-white pt-0 pb-[89px]">
-      <div className="mx-auto flex h-[700px] w-[1260px] flex-col gap-[64px]">
+    <section
+      id="faq"
+      className="
+        bg-white
+        px-5
+        pb-[80px]
+        pt-0
+
+        sm:px-6
+        sm:pb-[90px]
+
+        md:px-8
+        md:pb-[100px]
+
+        lg:px-0
+        lg:pb-[89px]
+      "
+    >
+      {/* Mobile + Tablet Layout */}
+      <div className="mx-auto flex w-full flex-col lg:hidden">
+        {/* Header */}
+        <div className="flex w-full flex-col gap-5 sm:gap-6">
+          <h2
+            className="
+              m-0
+              w-full
+              font-['Montserrat']
+              text-[30px]
+              font-semibold
+              leading-[1.15]
+              tracking-[0]
+              text-[#1A1A1A]
+
+              sm:max-w-[650px]
+              sm:text-[34px]
+
+              md:max-w-[750px]
+              md:text-[38px]
+            "
+          >
+            Got Questions? We’ve Got Answers.
+          </h2>
+
+          <p
+            className="
+              m-0
+              w-full
+              max-w-[600px]
+              font-['Inter']
+              text-[15px]
+              font-normal
+              leading-[28px]
+              tracking-[0]
+              text-[#1A1A1A]
+
+              sm:text-[16px]
+              sm:leading-[30px]
+
+              md:text-[17px]
+            "
+          >
+            Find quick solutions and clear explanations for everything you
+            need to know about pulsepoint
+          </p>
+        </div>
+
+        {/* FAQ Items */}
+        <div
+          className="
+            mt-10
+            flex
+            w-full
+            flex-col
+            gap-3
+
+            sm:mt-12
+            sm:gap-[14px]
+          "
+        >
+          {faqs.map((faq, index) => (
+            <FAQItem
+              key={faq.question}
+              question={faq.question}
+              answer={faq.answer}
+              isOpen={openIndex === index}
+              onToggle={() => handleToggle(index)}
+            />
+          ))}
+        </div>
+      </div>
+
+      {/* Desktop Layout */}
+      <div className="mx-auto hidden h-[700px] w-[1260px] flex-col gap-[64px] lg:flex">
         {/* Header */}
         <div className="flex h-[170px] w-[1260px] flex-col gap-[18px]">
           <h2 className="m-0 h-[92px] w-[638px] font-['Montserrat'] text-[38px] font-semibold leading-[100%] tracking-[0] text-[#1A1A1A]">

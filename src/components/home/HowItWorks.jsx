@@ -56,8 +56,80 @@ function HowItWorks() {
   const currentSteps = steps[audience];
 
   return (
-    <section id="how-it-works" className="bg-white pt-[133px] pb-[125px]">
-      <div className="mx-auto flex h-[726px] w-[1262px] flex-col gap-[13px]">
+    <section
+      id="how-it-works"
+      className="
+        bg-white
+        px-5
+        pb-[80px]
+        pt-[80px]
+
+        sm:px-6
+        sm:pb-[90px]
+        sm:pt-[90px]
+
+        md:px-8
+        md:pb-[100px]
+        md:pt-[100px]
+
+        lg:px-0
+        lg:pb-[125px]
+        lg:pt-[133px]
+      "
+    >
+      {/* Mobile + Tablet Layout */}
+      <div className="mx-auto flex w-full flex-col lg:hidden">
+        {/* Section Heading */}
+        <h2
+          className="
+            m-0
+            font-['Montserrat']
+            text-[30px]
+            font-semibold
+            leading-[100%]
+            tracking-[0]
+            text-[#000000]
+
+            sm:text-[34px]
+            md:text-[38px]
+          "
+        >
+          How It Works
+        </h2>
+
+        {/* Audience Toggle */}
+        <div className="mt-7 flex justify-start sm:mt-8">
+          <AudienceToggle
+            audience={audience}
+            setAudience={setAudience}
+          />
+        </div>
+
+        {/* Step Cards */}
+        <div
+          className="
+            mt-8
+            flex
+            w-full
+            flex-col
+            gap-4
+
+            sm:mt-10
+            sm:gap-5
+          "
+        >
+          {currentSteps.map((step) => (
+            <HowItWorksCard
+              key={step.number}
+              number={step.number}
+              description={step.description}
+            />
+          ))}
+        </div>
+      </div>
+
+      {/* Desktop Layout */}
+      <div className="mx-auto hidden h-[726px] w-[1262px] flex-col gap-[13px] lg:flex">
         {/* Section Heading */}
         <h2 className="m-0 h-[46px] w-[289px] font-['Montserrat'] text-[38px] font-semibold leading-[100%] tracking-[0] text-[#000000]">
           How It Works
