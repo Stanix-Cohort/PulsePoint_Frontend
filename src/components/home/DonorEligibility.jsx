@@ -2,7 +2,7 @@ import EligibilityCard from "./EligibilityCard";
 
 function DonorEligibility() {
   return (
-    <section className="bg-[#350202] pb-[102px] pt-[112px]">
+    <section id="eligibility"className="bg-[#350202] pb-[102px] pt-[112px]">
       {/* Header */}
       <div className="mx-auto flex h-[133px] w-[1264px] items-start justify-between">
         <h2 className="m-0 h-[46px] w-[404px] text-center font-['Montserrat'] text-[38px] font-semibold leading-[100%] tracking-[0] text-white">

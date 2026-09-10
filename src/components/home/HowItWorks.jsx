@@ -56,7 +56,7 @@ function HowItWorks() {
   const currentSteps = steps[audience];
 
   return (
-    <section className="bg-white pt-[133px] pb-[125px]">
+    <section id="how-it-works" className="bg-white pt-[133px] pb-[125px]">
       <div className="mx-auto flex h-[726px] w-[1262px] flex-col gap-[13px]">
         {/* Section Heading */}
         <h2 className="m-0 h-[46px] w-[289px] font-['Montserrat'] text-[38px] font-semibold leading-[100%] tracking-[0] text-[#000000]">

@@ -50,7 +50,7 @@ function WhyPulsePoint() {
     audience === "donors" ? donorFeatures : hospitalFeatures;
 
   return (
-    <section className="bg-white px-1 py-[100px]">
+    <section id="why-pulsepoint" className="bg-white px-1 py-[100px]">
       <div className="mx-auto flex w-full flex-col items-center">
         <h2 className="whitespace-nowrap font-['Montserrat'] text-[38px] font-semibold leading-[100%] tracking-[0] text-[#1D1D1D]">
           Why PulsePoint?

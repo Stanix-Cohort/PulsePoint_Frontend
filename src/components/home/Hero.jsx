@@ -1,8 +1,9 @@
 import Navbar from "../NavBar";
+import ActionButtons from "../ActionButtons";
 
 function Hero() {
   return (
-    <section
+    <section id="home"
       className="relative min-h-[800px] overflow-hidden rounded-[18px]"
       style={{
         background: `
@@ -135,93 +136,10 @@ function Hero() {
             </p>
           </div>
 
-          {/* Hero Buttons */}
-          <div
-            className="
-              mt-[13px]
-              flex
-              h-[52px]
-              w-[490px]
-              gap-[10px]
-            "
-          >
-            {/* Become a Donor */}
-            <a
-              href="###"
-              type="button"
-              className="
-                flex
-                h-[52px]
-                w-[251px]
-                shrink-0
-                items-center
-                justify-center
-                gap-[9px]
-                rounded-[12px]
-                border-r-[3px]
-                border-b-[3px]
-                border-white
-                bg-[#BC1010]
-                px-[48px]
-                py-[14px]
-                font-['Montserrat']
-                text-[14px]
-                font-semibold
-                leading-[160%]
-                text-white
-                cursor-pointer
-              "
-              style={{
-                borderRight: "3px solid #FFFFFF",
-                borderBottom: "3px solid #FFFFFF",
-              }}
-            >
-              <span className="whitespace-nowrap">
-                Become a Donor
-              </span>
-
-              <img
-                src="/arrow-right.svg"
-                alt=""
-                aria-hidden="true"
-                className="h-[10px] w-[14px] shrink-0"
-              />
-            </a>
-
-            {/* Find a Donor (Hospital) */}
-            <a
-              href="###"
-              type="button"
-              className="
-                flex
-                h-[50px]
-                w-[229px]
-                shrink-0
-                items-center
-                justify-center
-                gap-[20px]
-                rounded-[12px]
-                border
-                border-[#F4F4F4]
-                bg-transparent
-                px-[31px]
-                py-[14px]
-                font-['Montserrat']
-                text-[14px]
-                font-semibold
-                leading-[160%]
-                text-white
-                cursor-pointer
-              "
-              style={{
-                border: "1px solid #F4F4F4",
-              }}
-            >
-              <span className="whitespace-nowrap">
-                Find a Donor (Hospital)
-              </span>
-            </a>
-          </div>
+        {/* Hero Buttons */}
+        <div className="mt-[13px]">
+          <ActionButtons />
+        </div>
         </div>
 
         {/* Blood Visual */}

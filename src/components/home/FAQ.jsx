@@ -37,7 +37,7 @@ function FAQ() {
   };
 
   return (
-    <section className="bg-white pt-0 pb-[89px]">
+    <section id="faq" className="bg-white pt-0 pb-[89px]">
       <div className="mx-auto flex h-[700px] w-[1260px] flex-col gap-[64px]">
         {/* Header */}
         <div className="flex h-[170px] w-[1260px] flex-col gap-[18px]">
