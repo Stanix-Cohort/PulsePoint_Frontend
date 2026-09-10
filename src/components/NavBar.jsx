@@ -46,7 +46,7 @@ function Navbar() {
   }, [menuOpen]);
 
   return (
-    <nav className="fixed left-0 top-0 z-[999] w-full pt-2 sm:pt-3 lg:pt-6">
+    <nav className="fixed left-0 top-0 z-[999] w-full pt-2 sm:pt-3 xl:pt-6">
       {/* Desktop Navbar */}
       <div
         className="
@@ -57,7 +57,7 @@ function Navbar() {
           w-[1263.96px]
           items-center
           gap-[265px]
-          lg:flex
+          xl:flex
         "
       >
         {/* Left Navigation Container */}
@@ -254,7 +254,7 @@ function Navbar() {
           w-[calc(100%-32px)]
           sm:w-[calc(100%-48px)]
           md:w-[calc(100%-64px)]
-          lg:hidden
+          xl:hidden
         "
       >
         <div
@@ -300,6 +300,7 @@ function Navbar() {
               transition-transform
               duration-200
               hover:scale-105
+
               md:h-[34px]
               md:w-[34px]
             "
@@ -312,6 +313,7 @@ function Navbar() {
                   font-light
                   leading-none
                   text-black
+
                   md:text-[28px]
                 "
               >
@@ -372,6 +374,7 @@ function Navbar() {
                   transition-colors
                   duration-200
                   hover:text-red-700
+
                   md:text-[15px]
                 "
               >
@@ -389,6 +392,7 @@ function Navbar() {
                   transition-colors
                   duration-200
                   hover:text-red-700
+
                   md:text-[15px]
                 "
               >
@@ -406,6 +410,7 @@ function Navbar() {
                   transition-colors
                   duration-200
                   hover:text-red-700
+
                   md:text-[15px]
                 "
               >
@@ -423,6 +428,7 @@ function Navbar() {
                   transition-colors
                   duration-200
                   hover:text-red-700
+
                   md:text-[15px]
                 "
               >
@@ -451,6 +457,7 @@ function Navbar() {
                     duration-200
                     hover:-translate-y-[1px]
                     hover:bg-gray-50
+
                     md:h-[46px]
                     md:text-[14px]
                   "
@@ -478,6 +485,7 @@ function Navbar() {
                     duration-200
                     hover:-translate-y-[1px]
                     hover:bg-red-800
+
                     md:h-[46px]
                     md:text-[14px]
                   "

@@ -11,6 +11,7 @@ function Hero() {
         overflow-hidden
         rounded-[18px]
 
+        max-lg:min-h-[1100px]
         max-md:min-h-[1050px]
         max-sm:min-h-[1100px]
       "
@@ -44,14 +45,17 @@ function Hero() {
           items-start
           justify-between
 
+          max-xl:w-full
+          max-xl:px-10
+
           max-lg:mt-[130px]
-          max-lg:w-full
-          max-lg:max-w-[1100px]
+          max-lg:max-w-[900px]
+          max-lg:flex-col
+          max-lg:items-center
+          max-lg:gap-12
           max-lg:px-8
 
           max-md:mt-[110px]
-          max-md:flex-col
-          max-md:items-center
           max-md:gap-12
           max-md:px-6
 
@@ -68,9 +72,12 @@ function Hero() {
             flex-col
             gap-[20px]
 
-            max-lg:w-[58%]
+            max-xl:w-[56%]
+
+            max-lg:w-full
+            max-lg:max-w-[640px]
+
             max-md:w-full
-            max-md:max-w-[640px]
           "
         >
           {/* Saving Lives Across Nigeria */}
@@ -127,6 +134,8 @@ function Hero() {
               flex-col
               gap-[14px]
 
+              max-xl:w-full
+
               max-lg:h-auto
               max-lg:w-full
             "
@@ -143,6 +152,8 @@ function Hero() {
                 leading-[75px]
                 tracking-[-2px]
                 text-white
+
+                max-xl:w-full
 
                 max-lg:h-auto
                 max-lg:w-full
@@ -175,6 +186,8 @@ function Hero() {
                 tracking-[-0.2px]
                 text-white
 
+                max-xl:w-full
+
                 max-lg:h-auto
                 max-lg:w-full
                 max-lg:max-w-[560px]
@@ -204,97 +217,78 @@ function Hero() {
         <div
           className="
             relative
-            h-[556px]
-            w-[613px]
             shrink-0
 
-            max-lg:h-[480px]
-            max-lg:w-[45%]
+            w-[400px]
+            aspect-[422/573]
 
-            max-md:h-[430px]
+            max-xl:w-[350px]
+
+            max-lg:w-[350px]
             max-md:w-full
-            max-md:max-w-[613px]
+            max-md:max-w-[300px]
 
-            max-sm:h-[390px]
             max-sm:w-full
+            max-sm:max-w-[300px]
           "
         >
-          {/* Border */}
-          <img
-            src="/hero-border.png"
-            alt=""
-            aria-hidden="true"
-            className="
-              absolute
-              left-[23px]
-              top-[-9px]
-              z-10
-              h-[570px]
-              w-[815px]
-              object-contain
-
-              max-lg:left-1/2
-              max-lg:top-0
-              max-lg:h-[500px]
-              max-lg:w-[710px]
-              max-lg:-translate-x-1/2
-
-              max-md:top-0
-              max-md:h-[420px]
-              max-md:w-[600px]
-
-              max-sm:h-[320px]
-              max-sm:w-[460px]
-            "
-          />
-
-          {/* Blood Image */}
-          <img
-            src="/hero-blood.png"
-            alt="Hands holding a heart"
-            className="
-              absolute
-              left-[23px]
-              top-[10px]
-              z-20
-              h-auto
-              w-[748px]
-              object-contain
-
-              max-lg:left-1/2
-              max-lg:top-[5px]
-              max-lg:w-[660px]
-              max-lg:-translate-x-1/2
-
-              max-md:top-[5px]
-              max-md:w-[585px]
-
-              max-sm:top-[11px]
-              max-sm:w-[220px]
-            "
-          />
-
-          {/* Desktop Handwritten Text */}
+          {/* Scaled Visual Stage */}
           <div
             className="
               absolute
-              right-[-5px]
-              top-[-8px]
+              inset-0
+              md:-translate-x-[70px]
+            "
+          >
+            {/* Border */}
+            <img
+              src="/hero-border.png"
+              alt=""
+              aria-hidden="true"
+              className="
+                absolute
+                inset-0
+                z-10
+                h-auto
+                w-full
+                object-contain
+              "
+            />
+
+            {/* Blood Image */}
+            <img
+              src="/hero-blood.png"
+              alt="Hands holding a heart"
+              className="
+                absolute
+                left-1/2
+                top-[3.5%]
+                z-20
+                h-auto
+                w-[93.13%]
+                -translate-x-1/2
+                object-contain
+              "
+            />
+          </div>
+
+          {/* Desktop + Tablet Handwritten Text */}
+          <div
+            className="
+              absolute
+              right-[2%]
+              top-[2%]
               z-30
-              max-md:hidden
               handwritten-entrance
 
-              max-lg:right-[2%]
-              max-lg:top-0
-              max-lg:scale-[0.9]
+              max-xl:right-[-2%]
+              max-xl:top-[1%]
+              max-xl:scale-[0.9]
 
-              max-md:right-[8%]
-              max-md:top-[-5px]
-              max-md:scale-[0.85]
+              max-lg:right-[-2%]
+              max-lg:top-[1%]
 
-              max-sm:right-[5%]
-              max-sm:top-[-8px]
-              max-sm:scale-[0.7]
+              max-md:hidden
             "
           >
             <div
@@ -342,14 +336,16 @@ function Hero() {
             className="
               absolute
               bottom-0
-              left-[5%]
+              left-[-40%]
+              top-[60%]
               z-30
               hidden
               handwritten-entrance
 
               max-md:flex
 
-              max-sm:left-[4%]
+              max-sm:left-[-7%]
+              max-sm:top-[90%]
             "
           >
             <div

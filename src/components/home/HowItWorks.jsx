@@ -72,13 +72,13 @@ function HowItWorks() {
         md:pb-[100px]
         md:pt-[100px]
 
-        lg:px-0
-        lg:pb-[125px]
-        lg:pt-[133px]
+        xl:px-0
+        xl:pb-[125px]
+        xl:pt-[133px]
       "
     >
       {/* Mobile + Tablet Layout */}
-      <div className="mx-auto flex w-full flex-col lg:hidden">
+      <div className="mx-auto flex w-full flex-col xl:hidden">
         {/* Section Heading */}
         <h2
           className="
@@ -129,7 +129,7 @@ function HowItWorks() {
       </div>
 
       {/* Desktop Layout */}
-      <div className="mx-auto hidden h-[726px] w-[1262px] flex-col gap-[13px] lg:flex">
+      <div className="mx-auto hidden h-[726px] w-[1262px] flex-col gap-[13px] xl:flex">
         {/* Section Heading */}
         <h2 className="m-0 h-[46px] w-[289px] font-['Montserrat'] text-[38px] font-semibold leading-[100%] tracking-[0] text-[#000000]">
           How It Works

@@ -24,14 +24,14 @@ function HowItWorksCard({ number, description }) {
         md:px-8
         md:py-8
 
-        lg:h-[287px]
-        lg:min-h-0
-        lg:w-[317px]
-        lg:gap-[50px]
-        lg:rounded-[21px]
-        lg:px-[30px]
-        lg:py-[34px]
-    "
+        xl:h-[287px]
+        xl:min-h-0
+        xl:w-[317px]
+        xl:gap-[50px]
+        xl:rounded-[21px]
+        xl:px-[30px]
+        xl:py-[34px]
+      "
     >
       <div
         className="
@@ -44,9 +44,9 @@ function HowItWorksCard({ number, description }) {
 
           md:gap-7
 
-          lg:h-[219px]
-          lg:w-[257px]
-          lg:gap-[57px]
+          xl:h-[219px]
+          xl:w-[257px]
+          xl:gap-[57px]
         "
       >
         <span
@@ -61,8 +61,8 @@ function HowItWorksCard({ number, description }) {
 
             md:text-[100px]
 
-            lg:text-[120px]
-            lg:leading-[50.95px]
+            xl:text-[120px]
+            xl:leading-[50.95px]
           "
         >
           {number}
@@ -86,10 +86,10 @@ function HowItWorksCard({ number, description }) {
             md:text-[16px]
             md:leading-[27px]
 
-            lg:h-[72px]
-            lg:w-[239px]
-            lg:text-[15px]
-            lg:leading-[23.8px]
+            xl:h-[72px]
+            xl:w-[239px]
+            xl:text-[15px]
+            xl:leading-[23.8px]
           "
         >
           {description}

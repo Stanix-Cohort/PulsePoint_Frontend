@@ -23,20 +23,21 @@ function WhyPulsePointCard({
         md:pt-[27px]
         md:pb-[27px]
 
-        lg:h-[278.07px]
-        lg:min-h-0
-        lg:px-[25px]
-        lg:pt-[27px]
-        lg:pb-[27px]
+        xl:h-[278.07px]
+        xl:min-h-0
+        xl:px-[25px]
+        xl:pt-[27px]
+        xl:pb-[27px]
 
         ${position === 0 ? "rounded-tl-[18px] rounded-bl-[18px]" : ""}
         ${position === 2 ? "rounded-tr-[18px] rounded-br-[18px]" : ""}
 
-        max-lg:rounded-[16px]
-        lg:first:rounded-tl-[18px]
-        lg:first:rounded-bl-[18px]
-        lg:last:rounded-tr-[18px]
-        lg:last:rounded-br-[18px]
+        max-xl:rounded-[16px]
+
+        xl:first:rounded-tl-[18px]
+        xl:first:rounded-bl-[18px]
+        xl:last:rounded-tr-[18px]
+        xl:last:rounded-br-[18px]
       `}
     >
       {/* Icon */}
@@ -72,8 +73,8 @@ function WhyPulsePointCard({
 
           sm:mt-[20px]
 
-          lg:h-[121px]
-          lg:w-[340px]
+          xl:h-[121px]
+          xl:w-[340px]
         "
       >
         {/* Title */}
@@ -92,7 +93,7 @@ function WhyPulsePointCard({
             sm:text-[17px]
             sm:leading-[18px]
 
-            lg:w-full
+            xl:w-full
           "
         >
           {title}
@@ -116,8 +117,8 @@ function WhyPulsePointCard({
             sm:text-[15px]
             sm:leading-[30px]
 
-            lg:w-[310px]
-            lg:max-w-none
+            xl:w-[310px]
+            xl:max-w-none
           "
         >
           {description}

@@ -51,12 +51,12 @@ function FAQ() {
         md:px-8
         md:pb-[100px]
 
-        lg:px-0
-        lg:pb-[89px]
+        xl:px-0
+        xl:pb-[89px]
       "
     >
       {/* Mobile + Tablet Layout */}
-      <div className="mx-auto flex w-full flex-col lg:hidden">
+      <div className="mx-auto flex w-full flex-col xl:hidden">
         {/* Header */}
         <div className="flex w-full flex-col gap-5 sm:gap-6">
           <h2
@@ -129,7 +129,7 @@ function FAQ() {
       </div>
 
       {/* Desktop Layout */}
-      <div className="mx-auto hidden h-[700px] w-[1260px] flex-col gap-[64px] lg:flex">
+      <div className="mx-auto hidden h-[700px] w-[1260px] flex-col gap-[64px] xl:flex">
         {/* Header */}
         <div className="flex h-[170px] w-[1260px] flex-col gap-[18px]">
           <h2 className="m-0 h-[92px] w-[638px] font-['Montserrat'] text-[38px] font-semibold leading-[100%] tracking-[0] text-[#1A1A1A]">

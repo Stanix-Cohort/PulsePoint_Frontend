@@ -17,11 +17,11 @@ function EligibilityCard({ title, description }) {
         sm:px-[25px]
         sm:py-[27px]
 
-        lg:h-[115px]
-        lg:min-h-0
-        lg:w-[294.5px]
-        lg:px-[25px]
-        lg:py-[27px]
+        xl:h-[115px]
+        xl:min-h-0
+        xl:w-[294.5px]
+        xl:px-[25px]
+        xl:py-[27px]
       "
     >
       <div
@@ -34,9 +34,9 @@ function EligibilityCard({ title, description }) {
 
           sm:gap-[13px]
 
-          lg:h-[61px]
-          lg:w-[244.5px]
-          lg:gap-[13px]
+          xl:h-[61px]
+          xl:w-[244.5px]
+          xl:gap-[13px]
         "
       >
         {/* Title */}
@@ -74,7 +74,7 @@ function EligibilityCard({ title, description }) {
             sm:text-[15px]
             sm:leading-[30px]
 
-            lg:w-full
+            xl:w-full
           "
         >
           {description}

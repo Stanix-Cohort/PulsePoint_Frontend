@@ -64,8 +64,8 @@ function WhyPulsePoint() {
         md:px-8
         md:py-[90px]
 
-        lg:px-4
-        lg:py-[100px]
+        xl:px-4
+        xl:py-[100px]
       "
     >
       <div
@@ -92,7 +92,7 @@ function WhyPulsePoint() {
 
             sm:text-[34px]
 
-            lg:text-[38px]
+            xl:text-[38px]
           "
         >
           Why PulsePoint?
@@ -121,12 +121,12 @@ function WhyPulsePoint() {
             sm:border-b-[7px]
             sm:p-[9px]
 
-            lg:mt-12
-            lg:h-[307px]
-            lg:w-[1206px]
-            lg:border-r-[8px]
-            lg:border-b-[8px]
-            lg:p-[10px]
+            xl:mt-12
+            xl:h-[307px]
+            xl:w-[1206px]
+            xl:border-r-[8px]
+            xl:border-b-[8px]
+            xl:p-[10px]
           "
         >
           <div
@@ -138,9 +138,9 @@ function WhyPulsePoint() {
 
               md:grid-cols-2
 
-              lg:h-[268px]
-              lg:grid-cols-3
-              lg:gap-[8px]
+              xl:h-[268px]
+              xl:grid-cols-3
+              xl:gap-[8px]
             "
           >
             {features.map((feature, index) => (

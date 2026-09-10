@@ -14,12 +14,12 @@ function FAQItem({ question, answer, isOpen, onToggle }) {
             : "px-5 py-4 sm:px-[18px] sm:py-[12px]"
         }
 
-        lg:w-[1030px]
-        lg:rounded-[13px]
+        xl:w-[1030px]
+        xl:rounded-[13px]
         ${
           isOpen
-            ? "lg:px-[22px] lg:py-[17px]"
-            : "lg:px-[18px] lg:py-[12px]"
+            ? "xl:px-[22px] xl:py-[17px]"
+            : "xl:px-[18px] xl:py-[12px]"
         }
       `}
     >
@@ -35,9 +35,11 @@ function FAQItem({ question, answer, isOpen, onToggle }) {
           justify-start
           gap-4
           text-left
+
           sm:gap-[20px]
-          lg:items-center
-          lg:gap-[23px]
+
+          xl:items-center
+          xl:gap-[23px]
         "
       >
         <span
@@ -56,6 +58,7 @@ function FAQItem({ question, answer, isOpen, onToggle }) {
             transition-transform
             duration-300
             ease-out
+
             ${isOpen ? "rotate-90" : "rotate-0"}
           `}
         >
@@ -76,8 +79,8 @@ function FAQItem({ question, answer, isOpen, onToggle }) {
 
             md:text-[18px]
 
-            lg:text-[18px]
-            lg:leading-[42px]
+            xl:text-[18px]
+            xl:leading-[42px]
           "
         >
           {question}
@@ -91,6 +94,7 @@ function FAQItem({ question, answer, isOpen, onToggle }) {
           transition-[grid-template-rows,opacity]
           duration-300
           ease-out
+
           ${
             isOpen
               ? "grid-rows-[1fr] opacity-100"
@@ -121,10 +125,10 @@ function FAQItem({ question, answer, isOpen, onToggle }) {
 
               md:leading-[30px]
 
-              lg:mt-[10px]
-              lg:w-[986px]
-              lg:text-[15px]
-              lg:leading-[30px]
+              xl:mt-[10px]
+              xl:w-[986px]
+              xl:text-[15px]
+              xl:leading-[30px]
             "
           >
             {answer}

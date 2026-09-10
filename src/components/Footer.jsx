@@ -17,9 +17,9 @@ function Footer() {
         md:px-8
         md:py-14
 
-        lg:h-[472px]
-        lg:px-[90px]
-        lg:py-[56px]
+        xl:h-[472px]
+        xl:px-[90px]
+        xl:py-[56px]
       "
     >
       {/* Mobile + Tablet Layout */}
@@ -30,7 +30,7 @@ function Footer() {
           w-full
           flex-col
 
-          lg:hidden
+          xl:hidden
         "
       >
         {/* Brand Header */}
@@ -171,7 +171,7 @@ function Footer() {
       </div>
 
       {/* Desktop Layout */}
-      <div className="hidden h-[360px] w-full justify-between gap-[99px] lg:flex">
+      <div className="hidden h-[360px] w-full justify-between gap-[99px] xl:flex">
         {/* Left Side */}
         <div className="flex h-[360px] w-[560px] flex-col justify-between">
           {/* Logo, Description & Buttons */}

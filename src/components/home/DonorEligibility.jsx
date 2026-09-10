@@ -18,9 +18,9 @@ function DonorEligibility() {
         md:pb-[90px]
         md:pt-[100px]
 
-        lg:px-0
-        lg:pb-[102px]
-        lg:pt-[112px]
+        xl:px-0
+        xl:pb-[102px]
+        xl:pt-[112px]
       "
     >
       {/* Header */}
@@ -32,11 +32,11 @@ function DonorEligibility() {
           flex-col
           items-start
 
-          lg:h-[133px]
-          lg:w-[1264px]
-          lg:flex-row
-          lg:items-start
-          lg:justify-between
+          xl:h-[133px]
+          xl:w-[1264px]
+          xl:flex-row
+          xl:items-start
+          xl:justify-between
         "
       >
         <h2
@@ -53,10 +53,10 @@ function DonorEligibility() {
 
             sm:text-[34px]
 
-            lg:h-[46px]
-            lg:w-[404px]
-            lg:text-center
-            lg:text-[38px]
+            xl:h-[46px]
+            xl:w-[404px]
+            xl:text-center
+            xl:text-[38px]
           "
         >
           Donor Eligibility Tips
@@ -72,9 +72,9 @@ function DonorEligibility() {
 
             sm:mt-6
 
-            lg:mt-0
-            lg:h-[133px]
-            lg:w-[450px]
+            xl:mt-0
+            xl:h-[133px]
+            xl:w-[450px]
           "
         >
           <p
@@ -91,10 +91,10 @@ function DonorEligibility() {
               sm:text-[16px]
               sm:leading-[30px]
 
-              lg:h-[70px]
-              lg:w-[450px]
-              lg:text-[17px]
-              lg:leading-[35px]
+              xl:h-[70px]
+              xl:w-[450px]
+              xl:text-[17px]
+              xl:leading-[35px]
             "
           >
             Before signing up, make sure you meet the basic requirements to
@@ -151,13 +151,13 @@ function DonorEligibility() {
 
           md:max-w-[700px]
 
-          lg:mt-[57px]
-          lg:h-[395px]
-          lg:w-[1264px]
-          lg:max-w-none
-          lg:flex-row
-          lg:gap-[8px]
-          lg:p-[10px]
+          xl:mt-[57px]
+          xl:h-[395px]
+          xl:w-[1264px]
+          xl:max-w-none
+          xl:flex-row
+          xl:gap-[8px]
+          xl:p-[10px]
         "
       >
         {/* First Card Stack */}
@@ -172,9 +172,9 @@ function DonorEligibility() {
             bg-[#BC1010]
             p-[7px]
 
-            lg:h-[375px]
-            lg:w-[308.5px]
-            lg:shrink-0
+            xl:h-[375px]
+            xl:w-[308.5px]
+            xl:shrink-0
           "
         >
           <EligibilityCard
@@ -203,9 +203,9 @@ function DonorEligibility() {
 
             sm:h-[300px]
 
-            lg:-ml-[10px]
-            lg:h-[375px]
-            lg:w-[639px]
+            xl:-ml-[10px]
+            xl:h-[375px]
+            xl:w-[639px]
           "
         >
           <img
@@ -232,9 +232,9 @@ function DonorEligibility() {
             bg-[#BC1010]
             p-[7px]
 
-            lg:h-[375px]
-            lg:w-[308.5px]
-            lg:shrink-0
+            xl:h-[375px]
+            xl:w-[308.5px]
+            xl:shrink-0
           "
         >
           <EligibilityCard
