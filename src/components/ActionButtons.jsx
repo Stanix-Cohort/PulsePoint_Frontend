@@ -16,7 +16,7 @@ function ActionButtons() {
     >
       {/* Become a Donor */}
       <a
-        href="###"
+        href="/signup/donor"
         className="
           flex
           h-[52px]
@@ -58,7 +58,7 @@ function ActionButtons() {
 
       {/* Find a Donor (Hospital) */}
       <a
-        href="###"
+        href="/signup/hospital"
         className="
           flex
           h-[50px]

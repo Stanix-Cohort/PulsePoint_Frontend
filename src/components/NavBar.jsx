@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import Logo from "./Logo";
 
-function Navbar() {
+function Navbar({ authPage = false }) {
   const [menuOpen, setMenuOpen] = useState(false);
   const [menuVisible, setMenuVisible] = useState(false);
   const menuRef = useRef(null);
@@ -46,7 +46,7 @@ function Navbar() {
   }, [menuOpen]);
 
   return (
-    <nav className="fixed left-0 top-0 z-[999] w-full pt-2 sm:pt-3 xl:pt-6">
+    <nav className="fixed left-0 top-0 z-[999] w-full pt-2 sm:pt-3 xl:pt-7">
       {/* Desktop Navbar */}
       <div
         className="
@@ -54,18 +54,18 @@ function Navbar() {
           mx-auto
           hidden
           h-[72px]
-          w-[1263.96px]
+          w-fit
           items-center
           gap-[265px]
           xl:flex
         "
       >
-        {/* Left Navigation Container */}
+        {/* Navigation Container */}
         <div
           className="
             flex
             h-[72px]
-            w-[720.96px]
+            w-fit
             shrink-0
             items-center
             rounded-[24px]
@@ -75,14 +75,14 @@ function Navbar() {
             shadow-[0_0_23px_rgba(0,0,0,0.07)]
           "
         >
-          <a href="#hero">
+          <a href={authPage ? "/" : "#hero"}>
             <Logo />
           </a>
 
           {/* Navigation Links */}
           <div className="ml-[60px] flex items-center gap-[34px]">
             <a
-              href="#why-pulsepoint"
+              href={authPage ? "/#why-pulsepoint" : "#why-pulsepoint"}
               className="
                 whitespace-nowrap
                 font-['Montserrat']
@@ -99,7 +99,7 @@ function Navbar() {
             </a>
 
             <a
-              href="#how-it-works"
+              href={authPage ? "/#how-it-works" : "#how-it-works"}
               className="
                 whitespace-nowrap
                 font-['Montserrat']
@@ -116,7 +116,7 @@ function Navbar() {
             </a>
 
             <a
-              href="#faq"
+              href={authPage ? "/#faq" : "#faq"}
               className="
                 whitespace-nowrap
                 font-['Montserrat']
@@ -133,7 +133,7 @@ function Navbar() {
             </a>
 
             <a
-              href="#privacy"
+              href={authPage ? "/#privacy" : "#privacy"}
               className="
                 whitespace-nowrap
                 font-['Montserrat']
@@ -152,97 +152,99 @@ function Navbar() {
         </div>
 
         {/* Desktop CTA Container */}
-        <div
-          className="
-            flex
-            h-[72px]
-            w-[278px]
-            shrink-0
-            items-center
-            gap-[6px]
-            rounded-[24px]
-            bg-white
-            px-[15px]
-            py-[11px]
-            shadow-[0_0_23px_rgba(0,0,0,0.07)]
-          "
-        >
-          {/* Log In */}
-          <a
-            href="###"
+        {!authPage && (
+          <div
             className="
               flex
-              h-[46px]
-              w-[101px]
+              h-[72px]
+              w-[278px]
               shrink-0
               items-center
-              justify-center
-              whitespace-nowrap
-              rounded-[12px]
-              border
-              border-black
+              gap-[6px]
+              rounded-[24px]
               bg-white
-              px-[28px]
-              py-[12px]
-              font-['Montserrat']
-              text-[14px]
-              font-semibold
-              leading-[22px]
-              text-black
-              transition-all
-              duration-200
-              hover:-translate-y-[1px]
-              hover:bg-gray-50
+              px-[15px]
+              py-[11px]
+              shadow-[0_0_23px_rgba(0,0,0,0.07)]
             "
           >
-            Log In
-          </a>
-
-          {/* Sign Up */}
-          <a
-            href="###"
-            className="
-              group
-              flex
-              h-[48px]
-              w-[141px]
-              shrink-0
-              items-center
-              justify-center
-              gap-2
-              whitespace-nowrap
-              rounded-[12px]
-              bg-red-700
-              px-[28px]
-              py-[12px]
-              font-['Montserrat']
-              text-[14px]
-              font-semibold
-              leading-[22px]
-              text-white
-              transition-all
-              duration-200
-              hover:-translate-y-[1px]
-              hover:bg-red-800
-            "
-          >
-            <span>Sign Up</span>
-
-            <img
-              src="/arrow-right.svg"
-              alt=""
-              aria-hidden="true"
+            {/* Log In */}
+            <a
+              href="###"
               className="
-                h-[10px]
-                w-[14px]
+                flex
+                h-[46px]
+                w-[101px]
                 shrink-0
-                transition-transform
+                items-center
+                justify-center
+                whitespace-nowrap
+                rounded-[12px]
+                border
+                border-black
+                bg-white
+                px-[28px]
+                py-[12px]
+                font-['Montserrat']
+                text-[14px]
+                font-semibold
+                leading-[22px]
+                text-black
+                transition-all
                 duration-200
-                group-hover:translate-x-1
+                hover:-translate-y-[1px]
+                hover:bg-gray-50
               "
-            />
-          </a>
-        </div>
+            >
+              Log In
+            </a>
+
+            {/* Sign Up */}
+            <a
+              href="/signup/donor"
+              className="
+                group
+                flex
+                h-[48px]
+                w-[141px]
+                shrink-0
+                items-center
+                justify-center
+                gap-2
+                whitespace-nowrap
+                rounded-[12px]
+                bg-red-700
+                px-[28px]
+                py-[12px]
+                font-['Montserrat']
+                text-[14px]
+                font-semibold
+                leading-[22px]
+                text-white
+                transition-all
+                duration-200
+                hover:-translate-y-[1px]
+                hover:bg-red-800
+              "
+            >
+              <span>Sign Up</span>
+
+              <img
+                src="/arrow-right.svg"
+                alt=""
+                aria-hidden="true"
+                className="
+                  h-[10px]
+                  w-[14px]
+                  shrink-0
+                  transition-transform
+                  duration-200
+                  group-hover:translate-x-1
+                "
+              />
+            </a>
+          </div>
+        )}
       </div>
 
       {/* Mobile + Tablet Navbar */}
@@ -280,7 +282,7 @@ function Navbar() {
           "
         >
           {/* Logo */}
-          <a href="#hero" onClick={closeMenu}>
+          <a href={authPage ? "/" : "#hero"} onClick={closeMenu}>
             <Logo />
           </a>
 
@@ -364,7 +366,7 @@ function Navbar() {
               `}
             >
               <a
-                href="#why-pulsepoint"
+                href={authPage ? "/#why-pulsepoint" : "#why-pulsepoint"}
                 onClick={closeMenu}
                 className="
                   font-['Montserrat']
@@ -382,7 +384,7 @@ function Navbar() {
               </a>
 
               <a
-                href="#how-it-works"
+                href={authPage ? "/#how-it-works" : "#how-it-works"}
                 onClick={closeMenu}
                 className="
                   font-['Montserrat']
@@ -400,7 +402,7 @@ function Navbar() {
               </a>
 
               <a
-                href="#faq"
+                href={authPage ? "/#faq" : "#faq"}
                 onClick={closeMenu}
                 className="
                   font-['Montserrat']
@@ -418,7 +420,7 @@ function Navbar() {
               </a>
 
               <a
-                href="#privacy"
+                href={authPage ? "/#privacy" : "#privacy"}
                 onClick={closeMenu}
                 className="
                   font-['Montserrat']
@@ -436,70 +438,72 @@ function Navbar() {
               </a>
 
               {/* Mobile CTA Buttons */}
-              <div className="flex gap-2 pt-1">
-                <a
-                  href="###"
-                  onClick={closeMenu}
-                  className="
-                    flex
-                    h-[42px]
-                    flex-1
-                    items-center
-                    justify-center
-                    rounded-[10px]
-                    border
-                    border-black
-                    font-['Montserrat']
-                    text-[13px]
-                    font-semibold
-                    text-black
-                    transition-all
-                    duration-200
-                    hover:-translate-y-[1px]
-                    hover:bg-gray-50
+              {!authPage && (
+                <div className="flex gap-2 pt-1">
+                  <a
+                    href="###"
+                    onClick={closeMenu}
+                    className="
+                      flex
+                      h-[42px]
+                      flex-1
+                      items-center
+                      justify-center
+                      rounded-[10px]
+                      border
+                      border-black
+                      font-['Montserrat']
+                      text-[13px]
+                      font-semibold
+                      text-black
+                      transition-all
+                      duration-200
+                      hover:-translate-y-[1px]
+                      hover:bg-gray-50
 
-                    md:h-[46px]
-                    md:text-[14px]
-                  "
-                >
-                  Log In
-                </a>
+                      md:h-[46px]
+                      md:text-[14px]
+                    "
+                  >
+                    Log In
+                  </a>
 
-                <a
-                  href="###"
-                  onClick={closeMenu}
-                  className="
-                    flex
-                    h-[42px]
-                    flex-1
-                    items-center
-                    justify-center
-                    gap-2
-                    rounded-[10px]
-                    bg-red-700
-                    font-['Montserrat']
-                    text-[13px]
-                    font-semibold
-                    text-white
-                    transition-all
-                    duration-200
-                    hover:-translate-y-[1px]
-                    hover:bg-red-800
+                  <a
+                    href="/signup/donor"
+                    onClick={closeMenu}
+                    className="
+                      flex
+                      h-[42px]
+                      flex-1
+                      items-center
+                      justify-center
+                      gap-2
+                      rounded-[10px]
+                      bg-red-700
+                      font-['Montserrat']
+                      text-[13px]
+                      font-semibold
+                      text-white
+                      transition-all
+                      duration-200
+                      hover:-translate-y-[1px]
+                      hover:bg-red-800
 
-                    md:h-[46px]
-                    md:text-[14px]
-                  "
-                >
-                  <span>Sign Up</span>
+                      md:h-[46px]
+                      md:text-[14px]
+                    "
+                  >
+                    <span>Sign Up</span>
 
-                  <img
-                    src="/arrow-right.svg"
-                    alt=""
-                    aria-hidden="true"
-                    className="h-[9px] w-[12px] shrink-0"
-                  />
-                </a>
-              </div>
+                    <img
+                      src="/arrow-right.svg"
+                      alt=""
+                      aria-hidden="true"
+                      className="h-[9px] w-[12px] shrink-0"
+                    />
+                  </a>
+                </div>
+              )}
             </div>
           )}
         </div>
