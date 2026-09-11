@@ -441,7 +441,7 @@ function Navbar({ authPage = false }) {
               {!authPage && (
                 <div className="flex gap-2 pt-1">
                   <a
-                    href="###"
+                    href="/login"
                     onClick={closeMenu}
                     className="
                       flex
